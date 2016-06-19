@@ -1,0 +1,93 @@
+<!-- A project for my Dad. </--> 
+
+<html>
+<head> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="day.css">
+<style type="text/css">
+.day {background: white; color: black;}
+.day dt { cursor: pointer; font-weight: bold; background: #e3e3e3; border-bottom: 1px solid white; font-size: 1.25em;}
+
+.night  {background: #ff0000;} 
+.night dt { cursor: pointer; font-weight: bold; border-bottom: 1px solid black; background: #a70000; font-size: 1.25em;}
+.night span { color: black;}
+
+span {color: white;}
+
+body {width: 700px;}
+
+p {font-family: cursive;}
+
+
+a {text-decoration: none; color: black;}
+</style>
+
+
+
+</head>
+<body class="day">
+<h1>I Love My Dad</h1>
+<h4> Hey Dad! I just wanted to tell you how much I love you. <span>(with some help from jQuery) :)</span></h4>
+
+<p></p>
+
+<dt>You are awesome because...</dt>
+<dd>You teach me valuable life skills including jQuery :)</dd>
+<dt>You make me smile when...</dt>
+<dd>You make funny "dad jokes" (They're hilarious too.) Hahaha!!</dd>
+<dt>The best intrest you sparked in me was...</dt>
+<dd>Sailing.</dd>
+
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<button><b><u>Show hidden message!</u></b></button>
+
+
+<p></p>
+<p></p>
+
+<span> I can't thank you enough for being the role model that you are; a true christian. Your love for God and Mom is truly bueatiful. Thank you for everything you do, Dad. See you soon. <br><br><p>-With love, Sam</p></br></br></span>
+
+
+<p></p>
+<p></p>
+
+
+
+
+<script>
+
+(function() {
+
+	var dd = $('dd')
+	dd.hide();
+	$('dt').on('mouseenter', function( ) {
+		$(this)
+			.next()
+				.slideDown()
+				.siblings('dd').slideUp();
+					
+	})
+})();
+
+(function() {
+	$('button').click(function() {
+		console.log("click")
+		$("body").toggleClass("day night")
+	});
+})();
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
